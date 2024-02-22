@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>여러가지 태그 종류</title>
+</head>
+<body>
+  여러가지 태그를 배워보자!
+
+  <!-- h1 ~ h6-->
+  <h1>제목1</h1>
+  <h2>제목2</h2>
+  <h3>제목3</h3>
+  <h4>제목4</h4>
+  <h5>제목5</h5>
+  <h6>제목6</h6>
+
+  <!-- p  -->
+  <!-- entity code : 특수문자 코드표. 코드상에서 엔티티 문자를 작성하면, 브라우저상에서 특수기호가 표기된다.-->
+  <p>하나의 문단을 표시하고 싶을 때 &lt; p&gt; 태그를 사용합니다.</p>
+  
+  <!-- img -->
+  <!-- src 속성 : 이미지의 주소 (권장!)-->
+  <!-- alt 속성 : 이미지를 보여줄 수 없을 때, 이미지를 대체할 텍스트(권장!)-->
+  <img src="./img/dog1.jpg" alt="귀여운 강아지" width="100"/>
+  <img src="./img/dog2.jpg" alt="우리집 강아지" width="100"/>
+  <img src="./img/dog3.jpg" alt="우리집 강아지" width="100" height="160" title="귀여워~!"/>
+  <img src="https://dimg.donga.com/wps/NEWS/IMAGE/2022/01/28/111500268.2.jpg" alt="모르는 강아지" width="100" alt="웹상의 강아지"/>
+  <img src="./img/dog4.jpg" alt="사라진 강아지"/>
+
+  <!-- br -->
+  <br />
+
+  <!-- a -->
+  <!-- href 속성 : content 클릭 시, 연결할 주소를 지정한다.(페이지 url) -->
+  
+  <!-- 절대주소 (absolute url)-->
+  <a href="https://www.naver.com">네이버</a><br/>
+  
+  <!-- 상대주소 (relative url)-->
+  <a href="./index.html">index 이동하기</a><br/>
+  
+  <!-- target 속성 : 링크가 열릴 위치를 지정
+      - _self (default) : 현재 탭에서 열기
+      - _blank : 새 탭에서 열기
+  -->
+  <a href="https://www.naver.com" target="_self">네이버(self)</a><br/>
+  <a href="https://www.naver.com" target="_blank">네이버(blank)</a><br/>
+
+  <!-- hr -->
+  <hr>
+
+  <!-- ul, ol -->
+  <!--type 속성 : disc(default), square, circle, none -->
+  <h3>오늘의 할 일</h3>
+  <ul type="square">
+    <li>HTML 복습하기</li>
+    <li>블로그 작성하기</li>
+    <li>운동하기</li>
+  </ul>
+
+<!-- type: 1(default), a, A, I -->
+<!-- start: 시작번호 지정-->
+<!-- reversed: 역순-->
+  <h3> 아이스 카페라떼 레시피</h3>
+  <ol start="3">
+    <li><strong>우유</strong> <em>180ml</em> 컵에 넣기</li>
+    <li><b>얼음</b>을 가득 넣기</li>
+    <li><i>에스프레소 샷</i>을 넣어주면</li>
+    <li><u>완성!</u> <del>맛있게 드세요!</del></li>
+  </ol>
+
+  <!-- 목록 태그의 중첩-->
+  <h3>내가 좋아하는 음식</h3>
+  <ol>
+    <li>양식
+      <ul>
+        <li>피자</li>
+        <li>햄버거</li>
+      </ul>
+    </li>
+    <li>한식
+      <ul>
+        <li>김치찌개</li>
+        <li>순두부찌개</li>
+      </ul>
+    </li>
+    <li>일식
+      <ul>
+        <li>돈가스</li>
+        <li>초밥</li>
+      </ul>
+    </li>
+  </ol>
+
+  <!--div, span : 가장 자주 쓰이는 태그들!!!-->
+  <!-- 주석 단축키 : cmd + / -->
+  <!-- div : 블럭요소, span : 인라인요소 -->
+  <div style="background: orange;">div 태그입니다 1</div>
+  <div style="background: blue;">div 태그입니다 2</div>
+
+  <span style="background: pink;">span 태그입니다 1</span>
+  <span style="background: skyblue;">span 태그입니다 2</span>
+</body>
+</html>
