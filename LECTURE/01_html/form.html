@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+</head>
+<body>
+  <h1>폼 관련 태그를 알아보자!</h1>
+
+  <!-- form 태그 : 사용자로부터 입력받는 요소(input, select등) 들을 감싸는 태그 속성으로, action, method가 있음. "서버"와 관련있음.-->
+  <form>
+
+    <br />
+    <!-- select 태그 : 옵션을 선택-->
+    <label for="flower">좋아하는 꽃</label>
+    <select name="flower" id="flower">
+      <option value="a">장미</option>
+      <option value="b">동백꽃</option>
+      <option value="c" disabled>안개꽃</option>
+    </select>
+
+    <label for="exercise">좋아하는 운동</label>
+    <select name="exercise" id="exercise">
+      <optgroup label="---실외운동---">
+        <option value="a">축구</option>
+        <option value="b">야구</option>
+      </optgroup>
+      <optgroup label="---실내운동---">
+        <option value="c">배드민턴</option>
+        <option value="d">탁구</option>
+      </optgroup>
+    </select>
+
+    <!-- input 태그
+    -name 속성을 가질 수 있다. => 서버가 있다면 사용해야 한다.
+      ->서버가 input을 구별할 수 있게 하는 속성
+    -disabled 속성: 편집 불가능
+    -placeholder 속성 : 안내문구, 미리보기
+    -->
+    Text1: <input type="text"/>
+    Text2: <input type="text" disabled/>
+    <br/>
+    <!--label 태그 : 폼 요소에 이름을 붙이기 위한 태그
+      (웹 접근성(=사용하기 편리함)에 적합하게 사용할 수 있는 태그)
+    -for속성 : 연결하려는 폼 요소의 id 속성값과 일치
+    -->
+    <label for="user-email">이메일</label>
+    <input type="email" id="user-email" placeholder="id@gmail.com">
+
+    <br/>
+    <input type="color">
+    <input type="range"><br/>
+    <input type="file">
+    <input type="number">
+    <input type="date">
+    <input type="datetime-local">
+    <br/>
+    <!-- 공통 : checkbox, radio type 모두 name 속성을 통한 카테고리화를 해야한다! -->
+    <!-- input의 checkbox type : 복수선택 가능-->
+    <h5>당신의 취미는 무엇인가요?</h5>
+    <input type="checkbox" name="interest" value="basketball" checked>농구
+    <input type="checkbox" name="interest" value="movie">영화보기
+    <input type="checkbox" name="interest" value="lay-down" checked>누워있기
+
+    <!-- input의 radio type : 배타 선택(그룹 중 하나만 선택가능)-->
+    <h5>당신의 성별은 무엇인가요?</h5>
+    <input type="radio" name="gender" value="f" id="gender-f">
+    <label for="gender-f">여자</label>
+    <input type="radio" name="gender" value="m" id="gender-m">
+    <label for="gender-m">남자</label>
+
+    <input type="radio", name="">
+    <br/>
+    <!--textarea 태그 : 여러줄을 입력받는 입력창
+    - cols, rows : 열, 행 길이
+    - 우측 하단 꼭짓점을 마우스로 이용하여 조절 가능
+    -->
+    <label for="introduce">자기소개</label>
+    <textarea id="introduce" cols="30" rows="5"></textarea>
+    <br />
+    <!-- input의 button type, button 태그 -->
+    <!-- 단순 버튼 : 클릭만 가능한 버튼 -->
+    <input type="button" value="단순 버튼1">
+    <button type="button">단순 버튼2</button>
+    <!-- 제출 버튼 : 폼을 제출하는 버튼-->
+    <input type="submit" value="제출 버튼1">
+    <button type="submit">제출 버튼2</button>
+
+    <!-- 참고 : type 속성을 생략한 버튼 태그
+      -type 속성 : button, submit 값 사용 가능
+      -button type: 폼 태그 바깥에 존재할 때 기본 값
+      -submit type: 폼 태그 안에 존재할 때 기본 값
+    -->
+  </form>
+</body>
+</html>
