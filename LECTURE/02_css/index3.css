@@ -1,0 +1,44 @@
+/* 일치 선택자 */
+section.first {
+  background-color: yellowgreen;
+}
+
+/* 하위(후손) 선택자: 공백 */
+body section {
+  border: 1px solid blue; /* 경계선 */
+}
+
+body section h2 {
+  border: 1px solid green;
+}
+
+/* 자식 선택자: > */
+.first > h2 {
+  color: white;
+  background-color: navy;
+}
+
+.second > h2 {
+  color: navy;
+  background-color: white;
+}
+
+/* 인접 형제 선택자 : + */
+#kong + li{
+  background-color:aqua;
+}
+/* 일반형제 선택자 */
+#kong ~li{
+  color:red;
+}
+
+/* CSS 색상 표현 방식
+  1. 색상 키워드 : red, blue, black, white, ...
+  2. 16진수 코드 : #XXXXXX
+  -#000000 : red(00)green(00)blue(00) =>black
+  -#ffffff : red(ff)green(ff)blue(ff)=>white
+
+  3.rgb 함수
+   -rgb(0,0,0) : black
+   -rgb(255,255,255) : white
+*/
