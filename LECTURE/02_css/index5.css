@@ -1,0 +1,47 @@
+*{
+  /* 
+  -content-box : 요소의 크기를 content만 포함시켜 계산하겠다!(default)
+  -border-box : 요소의 크기를 content, padding, border까지 포함시켜 계산하겠다!(권장)*/
+  box-sizing: border-box;
+}
+
+body{
+  /* font-family같은 경우, 사용자마다 사용하는 폰트가 다르므로, 일반적으로 3가지를 지정한다. */
+  /* font-family: Georgia, monospace; */
+  /* 조지아가 없다면 모노스페이스로 가~!*/
+  /* 이건 디자이너가 힘드니깐, 요즘은 웹폰트를 사용한다. */
+
+  /* 공백이 있는 건 문자열 처리해서, Noto Sans KR에만 따옴표.. */
+  /* 네트워크 오류로 폰트가 불러와지지 않았다면 sans-serif! */
+
+    font-family: "Noto Sans KR", monospace;
+}
+div{
+  background-color: #bbb;
+  font-size: 30px;
+  font-weight: 900;
+  font-family: "Black Han Sans", sans-serif;
+  font-style:oblique;
+  text-align: center;
+  text-decoration: underline;
+  line-height: 3;
+
+  width: 600px;
+  height: 200px;
+  
+  padding: 20px;
+  margin: 50px;
+
+
+  
+  border-width : 4px;
+  border-color: limegreen;
+  border-style: solid; 
+    /* border: 4px solid limegreen; */
+  /* border-bottom: 4px solid limegreen; */
+  border-radius: 0 50px;
+}
+
+div:hover{
+  visibility: hidden;
+}

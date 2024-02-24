@@ -1,0 +1,14 @@
+div{
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  border: 15px solid red;
+  background-color: orange;
+}
+
+div:first-child{
+  box-sizing: content-box;
+}
+div:nth-child(2){
+  box-sizing: border-box;
+}
