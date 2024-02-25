@@ -1,10 +1,11 @@
 div{
   background-color: blue;
+  color: #fff;
   text-align: center;
   line-height: calc(10vw);
   width: calc(10vw);
-  height:calc(15vh);
-  margin: 50%;
+  height:calc(10vw);
+  margin: calc(50vw - 5vw);
 }
 *{
   background-color: darkgrey;
