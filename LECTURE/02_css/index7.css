@@ -1,0 +1,65 @@
+div{
+  width: 100px;
+  height: 100px;
+  font-size: 700;
+  text-align: center;
+  line-height: 100px;
+}
+
+/* static : default 값
+    기본 값이기 때문에 position 속성을 명시하지 않아도 적용된다.
+    -inline 요소: 왼->오로 쌓임.
+    -block 요소 : 위->아래 로 쌓임
+*/
+.p-static {
+  position: static;
+  background-color: pink;
+}
+/* relative : 상대 위치.
+  -(주의)top/bottom/left/right중 하나 이상의 속성을 사용해야 한다. 
+  -원래 있어야 할 위치를 기준으로 top/bottom/left/right 이동.
+*/
+
+.p-relative{
+  position: relative;
+  left: 200px;
+  background-color: aquamarine;
+}
+
+/* absolute : 절대위치
+  - 누구를 기준? position 속성을 갖는 가장 가까운 조상 요소
+  - position 속성을 갖는 요소가 없다면, body를 기준.
+  -> 그 기준으로부터 top/bottom/left/right 이동.
+*/
+.p-absolute{
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  background-color: blue;
+}
+
+/* fixed: 고정 위치
+    -viewport(브라우저 화면)를 기준으로 특정 위치에 배치.
+    -브라우저 화면이 스크롤되어도 움직이지 않음.
+*/
+.p-fixed{
+  background-color: coral;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+/* position 속성 이용 예제 */
+
+.box{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #eee;
+}
+
+.heart{
+  position:absolute;
+  top: 10px;
+  right: 10px;
+}
