@@ -1,0 +1,11 @@
+body{
+  background-image: url("https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a");
+  background-repeat: no-repeat;
+  background-size:contain;
+
+  /* background-attachment
+    -scroll : 이미지가 요소를 따라 같이 스크롤된다.
+    -fixed : 이미지가 뷰포트에 고정되어 스크롤되지 않는다.
+  */
+  background-attachment: fixed;
+}

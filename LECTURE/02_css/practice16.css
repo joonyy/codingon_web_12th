@@ -1,0 +1,13 @@
+div{
+  width: 300px;
+  height: 300px;
+  margin: 0 30px 0 0;
+  border: 1px solid #aaa;
+}
+
+.grad-1{
+  background-image: conic-gradient(red,blue,white);
+}
+.grad-2{
+  background-image: radial-gradient(red, 10%,orange, green);
+}
