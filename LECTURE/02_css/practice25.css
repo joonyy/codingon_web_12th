@@ -1,0 +1,19 @@
+p{
+  animation-name:movein;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  position: relative;
+
+}
+
+@keyframes movein {
+  0%{
+    margin-left:100%;
+    width:300%;
+  }
+  100%{
+    margin-left:0%;
+    width:100%;
+  }
+}
