@@ -1,0 +1,98 @@
+/* animation */
+
+/* 
+
+-animation-name: @keyframes 애니메이션이름 지정
+  -시작 : from or 0%
+  -중간 : 0~100%
+  -끝 : to or 100%
+-animation-duration: 한 사이클의 애니메이션이 몇초동안 이루어져야 하는지 지정(단위 : s)
+-animation-delay:요소가 그려진 뒤 얼마나 기다렸다가 애니메이션을 시작할지 지정(단위: s)
+-animation-interation-count:애니메이션 반복 횟수(default:1, infinite(무한반복)
+-animation-timing0-function:중간 상태들의 전환을 어떤 시간간격으로 진행할 지 지정
+ex)linear, ease =in, ease-out 등
+- animation-direction: 애니메이션의 한 사이클이 종료되고, 반복될 때 진행할 방향 지정
+ex)noraml, reverse(반대방향), alternate(반복될때마다 방향을 바꿈), alternate-reverse
+-animate? from -> to 방향으로 애니메이션 진행 -> (다음 회차)to -> from 방향을 바꿔가며 변화.
+*/
+.box{
+  width:100px;
+  height:100px;
+  background-color: cyan;
+  position: relative;
+
+  animation-name:left-right;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes left-right {
+  0%{
+    left:0;
+  }
+  25%{
+    left:200px;
+  }
+  50%{
+    left:400px;
+  }
+  75%{
+    left: 200px;
+  }
+  100%{
+    left:0;
+  }
+}
+.bounce-ball1{
+  position:relative;
+  left: 100px;
+  top:0;
+
+  border-radius: 50%;
+  width:100px;
+  height:100px;
+  background-color: black;  
+
+  /* animation-name:bounce1;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite; */
+
+  /* 애니메이션 단축 프로퍼티 */
+  animation: bounce1 1s ease-out infinite alternate;
+}
+@keyframes bounce1 {
+  to{
+    top: 50px;
+  }
+  from{
+    top: 300px;
+  }
+}
+
+.bounce-ball2{
+  width:50px;
+  height: 50px;
+  background-color: tomato;
+  border-radius: 50%;
+
+  position:absolute;
+  animation:bounce2;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+}
+
+@keyframes bounce2{
+  from, to{
+    bottom:0;
+    animation-timing-function: ease-out;
+    /* 0px에서 정상속도로 시작 -> 속도를 줄이며 300px까지 도달 */
+  }
+
+  50%{
+    bottom: 300px;
+    animation-timing-function: ease-in;
+    /* 300px에서 천천히 시작되어 ->0px로 가면서 정속도로 끝남 */
+  }
+}
