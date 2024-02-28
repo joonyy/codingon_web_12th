@@ -1,27 +1,56 @@
 h3{
   text-align: center;
 }
+.menus{
+  display:flex;
+}
 
+li{
+  list-style: none;
+}
 header{
   background-color: #ccc;
-  height: 90px;
+  height: 60px;
   display: flex;
   justify-content: space-between;
   padding: 0 16px;
+}
+
+ul{
+  width:100%;
+  padding-inline-start: 0px;
+}
+.left{
+  display:flex;
+  align-items: center;
+}
+.right{
+  display:flex;
+  align-items: center;
+}
+.right>.menus>.menu:not(:last-child){
+  margin-right: 16px;
+  display:flex;
+  align-items: center;
+}
+
+.menus2{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .left-box{
   display:flex;
   align-items: center;
 }
-.menus{
+.left-box > .menus{
   display: flex;
   /* ul태그 기본 스타일 삭제. */
-  list-style: none;
   padding : 0 0 0 0;
   margin: 0 0 0 16px;
 }
-.menu:not(:last-child){
+.left-box> .menus >.menu:not(:last-child){
   margin-right:16px;
 }
 
@@ -32,4 +61,21 @@ header{
 .right-box{
   display: flex;
   align-items: center;
+}
+
+.logo-box{
+  display:flex;
+  align-items: center;
+}
+
+.login-box{
+  display: flex;
+  align-items: center;
+}
+
+.menu-box{
+  margin-top: 3px;
+}
+.menu-box > .menus > .menu:not(:last-child){
+  margin-right: 16px;
 }
