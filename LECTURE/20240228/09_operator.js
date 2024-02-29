@@ -3,7 +3,7 @@
   1)산술연산자 : +, -, /, *, %, **, ++, --, +=, -=, *= /= 
   2)대입연산자 : =
   3)비교연산자 : ==, ===, !(not), !=(같지 않다.), !==(같지 않다.)
-  4)삼항연산자
+  4)삼항연산자 : 조건 ? true :false;
   5)논리연산자 : &&, ||
 */
 
@@ -78,3 +78,9 @@ let defaultColor = 'blue';
 let currentColor = userColor || defaultColor;
 console.log('--------------------------');
 console.log('현재 컬러는 ', currentColor);
+
+//삼항연산자
+
+let points = 110;
+let type = points > 100 ? "gold" :"silver";
+console.log(type);
