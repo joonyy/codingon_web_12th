@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="alert('clicked!')">click!</button>
+  <br>
+  <button onclick="myF()">클릭!</button>
+  <br>
+  <button id="btn">보내기</button>
+  <script>
+    function myF(){
+      console.log('myF함수');
+    }
+    document.querySelector("#btn").addEventListener('click', function(){
+      console.log('이벤트 리스너 사용함')
+    })
+  </script>
+  <script>
+    window.addEventListener('load', function(){
+      console.log('웹 브라우저 로드됨');
+    })
+      
+
+  </script>
+</body>
+</html>

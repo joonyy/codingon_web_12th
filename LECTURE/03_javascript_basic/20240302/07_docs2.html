@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="demo">여기는 내용! </div>
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi nulla recusandae similique voluptatum neque quasi ducimus hic dignissimos itaque eligendi, reprehenderit est reiciendis aliquam aut amet quo facere molestiae vero.</p>
+  <script>
+    //innerHtml, innerText, textContent
+    //let txt = document.getElementById('demo').innerText;//공백 미출력
+    //let txt = document.getElementById('demo').textContent;//공백도 같이 출력.
+    //console.log(txt)
+    //document.getElementById('demo').innerHTML="<i> 아이콘 </i>"//html태그를 그대로 인식한다!
+    document.getElementById('demo').innerText="<i> 아이콘 </i>"//html태그를 인식하지 못한다.
+    document.getElementsByTagName('p')[0].innerText="김준영"
+  </script>
+
+  <h2>메뉴를 만들어봅시다.</h2>
+  <script>
+    let ul = document.createElement('ul');
+    for(let i =0; i<5;i++){
+      let li = document.createElement('li');
+      li.innerText=`MENU${i}`;
+      ul.appendChild(li);
+    }
+    document.body.appendChild(ul);
+  </script>
+  
+</body>
+</html>

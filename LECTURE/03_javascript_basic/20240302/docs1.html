@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="demo" class="mystyle">Heading ~~~</h1>
+  <h2 id="test">Heading 2</h2>
+  <h2 class="mystyle">Heading 2</h2>
+  <div class="mystyle">div</div>
+  <script>
+    // let h1 = document.getElementsByTagName('h1');
+    // let h1 = document.getElementById('demo');
+    let h1 =document.getElementsByClassName('mystyle')[0];
+    console.log(h1);
+
+    //let h2 = document.querySelector('h2');
+    //let h2 = document.querySelector('#test');
+    let h2= document.querySelectorAll('.mystyle');
+    console.log(h2);
+  </script>
+</body>
+</html>
