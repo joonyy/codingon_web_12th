@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box{border: 1px solid; width:100px; height: 100px;}
+    #green{ background-color: green;}
+    #red{background-color: red;}
+    .d-none{opacity: 0.5;}
+    .box1{background-color:yellow;}
+    .pr{background-color: aqua;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box mystyle section" id="green">1</div>
+    <div class="box" id="red">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+  </div>
+  <button onclick="addClass()">addClass</button>
+  <button onclick="removeClass()">removeClass</button>
+  <button onclick="containClass()">containClass</button>
+  <button onclick="toggleClass()">toggleClass</button>
+  <input type="text" name="username" id="username">
+
+  <script>
+    let inputBox = document.getElementById('username');
+    //let greenBox = document.getElementById('green');
+    //console.log(greenBox.classList);
+    function addClass(){
+      inputBox.classList.add('pr');
+      //greenBox.classList.add('box1');
+      //console.log(greenBox.classList)
+    }
+
+    function removeClass(){
+      inputBox.classList.remove('pr');
+      //greenBox.classList.remove('box1');
+      //console.log(greenBox.classList);
+    }
+    function containClass(){
+      let check = inputBox.classList.contains('pr');
+      console.log(check);
+      //console.log(greenBox.classList.contains('box1'));
+    }
+    function toggleClass(){
+      inputBox.classList.toggle('pr');
+      //greenBox.classList.toggle('box1');
+    }
+  </script>
+</body>
+</html>

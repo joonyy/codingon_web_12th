@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+    <form action="" method="" onsubmit="login()">
+      <div>
+        <label for="email">이메일</label>
+        <input type="email" name="" id="email" required />
+      </div>
+      <div>
+        <label for="pw">비밀번호</label>
+        <input type="password" name="" id="pw" required oninvalid="this.setCustomValidity('비밀번호를 입력하세요')"/>
+      </div>
+      <button type="submit">로그인</button>
+    </form>
+  <script>
+    function login(){
+      event.preventDefault();
+      const email = document.querySelector('#email').value;
+      const pw = document.querySelector('#pw').value;
+      //console.log(email,pw);
+      if(!email.checkValidity()){
+        return alert(email.validationMessage);
+      }
+      if(!pw.checkValidity()){
+        return alert(pw.validationMessage);
+      }
+    }
+    //setCustomValidity() : 엘리먼트 인터페이스 요소에 대한 사용자 지정 유효성 메시지를 설정한다.
+  </script>
+</body>
+</html>

@@ -12,15 +12,21 @@
     <li></li>
     <li></li>
   </ul>
-  <div id="demo"></div>
+  <div id="demo">주문 내역을 입력하세요</div>
   <p class="myStyle"></p>
   <p class="style demo"></p>
 
   <script>
     let myid = document.getElementById('demo');
+    console.log(myid.innerText);
+    myid.innerText="홍길동";
+    myid.innerHTML="<i>홍길동</i>";
+    //textContent : 내용 공백이 있어도 그대로 출력하고 싶을 때 사용
+
+
+
     let myclass = document.getElementsByClassName('myStyle')[0];
     let mytag = document.getElementsByTagName('p')[0];
-    console.log(myid);
     console.log(myclass);
     console.log(mytag);
     let mydemo = document.querySelector('#demo');
@@ -31,6 +37,17 @@
     console.log(myclass2);
     console.log(myclass3);
 
+    //이벤트
+
+
+    let ul=document.createElement('ul');
+      for(let i=0;i<5;i++){
+        let li = document.createElement('li');
+        li.innerText = "menu" + i;
+        ul.appendChild(li);
+      }
+    console.log(ul);
+    document.body.appendChild(ul);
   </script>
 </body>
 </html>

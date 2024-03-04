@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .demo{
+      background-color: gold;
+    }
+    .democlass{
+      text-decoration: underline; background-color: orange;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="myH1" class="mystyle">The Element Object</h1>
+  <p id="section1"></p>
+  <div class="demo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta id molestiae blanditiis esse. Quo at voluptate mollitia exercitationem deleniti, enim accusamus cupiditate illum? Quod dolorum atque perspiciatis, incidunt dolorem dignissimos.</div>
+  <button onclick="myF()">Add Class</button>
+
+
+  <script>
+    //<div id="div1" style="background-color: red; text-align:center;">div</div>
+    //let div1= document.getElementById(div1);
+    ////get,attribute
+    //let mystyle= div1.getAttribute('style');
+    //console.log(mystyle);
+
+    //const elem = document.getElementById('myH1');
+    //let txt = elem.getAttribute('class');
+    //let x = document.getElementById('section1');
+    //x.innerText = txt;
+
+    let txt = document.getElementById('myH1').getAttribute('class');
+    document.getElementById('section1').innerText=txt;
+    function myF(){
+      document.getElementById('myH1').setAttribute('class', 'democlass');
+      document.getElementsByClassName('demo')[0].setAttribute('class','democlass');
+    }
+  </script>
+
+</body>
+</html>
