@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>heading</h1>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+  <div id="demo"></div>
+  <p class="myStyle"></p>
+  <p class="style demo"></p>
+
+  <script>
+    let myid = document.getElementById('demo');
+    let myclass = document.getElementsByClassName('myStyle')[0];
+    let mytag = document.getElementsByTagName('p')[0];
+    console.log(myid);
+    console.log(myclass);
+    console.log(mytag);
+    let mydemo = document.querySelector('#demo');
+    let myclass2 = document.querySelector('.myStyle');
+    let myclass3 = document.querySelectorAll('.myStyle');
+
+    console.log(mydemo);
+    console.log(myclass2);
+    console.log(myclass3);
+
+  </script>
+</body>
+</html>
