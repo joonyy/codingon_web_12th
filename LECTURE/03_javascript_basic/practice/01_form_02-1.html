@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select multiple>
+        <option data-value="-">과목선택:</option>
+        <option data-value="one" selected >html</option>
+        <option data-value="two">css</option>
+        <option data-value="three">javascript</option>
+      </select>
+      <script>
+    // javascript
+    let optionList= document.querySelectorAll('option'); 
+      optionList.forEach(item => {
+           console.log(item.getAttribute('data-value'))
+       })
+   
+ 
+</script>
+ 
+</body>
+</html>

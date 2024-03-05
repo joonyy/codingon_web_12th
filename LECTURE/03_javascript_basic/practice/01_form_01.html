@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { font-family: system-ui; line-height: 1.5;
+                  padding: 1rem;}
+        label { display: block;}
+        input[type='text'],
+        input[type='email'] {
+            border:1px solid #ccc;
+            border-radius: 5px;
+            padding: 0.5rem 0.7rem;
+        }
+        input[type='text']:focus,
+        input[type='email']:focus {
+            border-color: #7db0fb; 
+            outline:0;
+            box-shadow: 0 0 0 4px rgba(24,117,255,0.25);
+            transition: border-color 0.15s, box-shadow 0.15s;
+        }
+        button {
+            background: #0d6efd;  color:white;
+            border: 0; padding: 0.5rem 0.7rem; 
+            border-radius: 5px;}
+        .form-group{ margin-bottom: 1rem; }
+      </style>
+</head>
+<body>
+    <form>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email">
+        </div>
+        <button type="submit">Register</button>
+        <button type="reset">Clear</button>
+    </form>
+</body>
+</html>
