@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/H9CfCUH4gxA?si=xiIRJZ5qYsfX6FBO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni enim rem repudiandae suscipit magnam voluptates molestiae a modi nobis? Natus porro quo voluptate esse laudantium atque corrupti rem tempore beatae!</p>
+  <script>
+    $(document).ready(function(){
+      resizeYoutube();
+    })
+    $(window).on('resize',function(){
+      resizeYoutube();
+    })
+    function resizeYoutube(){
+      $('iframe').each(function(){
+        if( /^https?:\/\/www.youtube.com\/embed\//g.test($(this).attr("src"))){
+          $(this).css('width','100%');
+          $(this).css('height', Math.ceil(parseInt($(this).css('width'))*480/854) + 'px');
+        }
+      })
+    }
+  </script>
+</body>
+</html>
