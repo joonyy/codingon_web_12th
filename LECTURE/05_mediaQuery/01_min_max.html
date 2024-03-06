@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{background-color: red;}
+    @media screen and (min-width : 768px) {
+        body{background-color: blue;}
+        /*미디어 쿼리에는 바뀌는 내용만 적는다.*/
+    }
+    @media screen  and (min-width:900px) {
+      body{background-color: yellowgreen;}
+    }
+    @media screen and (min-width:901px) and (max-width : 1200px) {
+      body{background-color: #ccc;}
+    }
+    @media screen and (min-width:1600px){
+      body{background-color: pink;}
+    }
+  </style>
+</head>
+<body>
+
+  <h1>min-width는 모바일 first로 제작</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, doloribus assumenda. Vitae obcaecati quasi consequuntur blanditiis nisi ipsum assumenda accusantium nemo, unde dignissimos deserunt expedita, repellendus laudantium, at nam. Nulla?</p>
+  
+  <h2>무료 이미지 가져오기</h2>
+  <img src="https://placehold.co/200x200" alt="이미지 설명">
+  <br>
+  <img src="https://source.unsplash.com/random/200x200/?tatoo" alt="">
+</body>
+
+</html>
