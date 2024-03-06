@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    svg{
+      width: 50px;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      height: 900000px;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    /* header 스타일링 */
+    header {
+      width: 100%;
+      height: 100px;
+    }
+    header .inner {
+      background-color: lightblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+    header .inner .logo {
+      position: relative;
+      right: 200px;
+  }
+    header .inner .menu {
+      display: flex;
+    }
+    header .inner .menu li {
+      margin: 0 10px;
+      font-weight: 800;
+    }
+
+    @media screen and (width<=768px) {
+      header {
+        height: 60px;
+        flex-direction: column;
+      }
+      header .inner {
+        display: block;
+      }
+      header .inner .logo {
+        position:static;
+        right:0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 60px;
+      }
+      header .inner .menu {
+        display: block;
+        background-color: azure;
+        text-align: center;
+      }
+      header .inner .menu li {
+        padding: 10px 0;
+        font-weight: 500;
+      }
+    }
+</style>
+</head>
+<body>
+<header class="fixed-top">
+    <div class="inner">
+        <div class="logo">
+          <svg class="SVGBGI" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path class="accent" d="M18 13H6L5 7h14l-1 6z"></path><path class="outline" d="M21 5a3 3 0 0 0-3-3H6a3 3 0 0 0-1.83 5.36l1.56 12.45A2.5 2.5 0 0 0 8.21 22h7.59a2.5 2.5 0 0 0 2.48-2.19l1.56-12.45A2.98 2.98 0 0 0 21 5ZM6 4h12c.55 0 1 .45 1 1s-.45 1-1 1H6c-.55 0-1-.45-1-1s.45-1 1-1Zm11.23 8H6.77l-.5-4h11.47l-.5 4Zm-.95 7.56a.5.5 0 0 1-.5.44H8.19a.51.51 0 0 1-.5-.44L7 14h9.97l-.7 5.56Z"></path><path class="solid" d="M21 5a3 3 0 0 0-3-3H6a3 3 0 0 0-1.83 5.36l1.56 12.45A2.5 2.5 0 0 0 8.21 22h7.59a2.5 2.5 0 0 0 2.48-2.19l1.56-12.45A2.98 2.98 0 0 0 21 5ZM6 4h12c.55 0 1 .45 1 1s-.45 1-1 1H6c-.55 0-1-.45-1-1s.45-1 1-1Zm10.29 15.56a.5.5 0 0 1-.5.44H8.2a.51.51 0 0 1-.5-.44L7 14h9.97l-.7 5.56Z"></path></svg>
+        </div>
+        <ul class="menu">
+            <li>메뉴1</li>
+            <li>메뉴2</li>
+            <li>메뉴3</li>
+            <li>메뉴4</li>
+        </ul>
+    </div>
+</header>
+
+</body>
+</html>
