@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <img src="" alt="과일" width="100px" height="100px">
+  <button onclick="changeImg('apple')">사과</button>
+  <button onclick="changeImg('banana')">바나나</button>
+  <button onclick="changeImg('grape')">포도</button>
+  <button onclick="changeImg('peach')">복숭아</button>
+</body>
+<script>
+  function changeImg(name){
+    $('img').attr('src', `./img/${name}.png`)
+  }
+</script>
+</html>
