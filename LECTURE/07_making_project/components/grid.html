@@ -1,0 +1,13 @@
+<style>
+  .grid{display: grid;}
+  @media screen and (min-width:768px) {
+    .grid--1x2{
+      grid-template-columns: repeat(3,1fr);
+    }
+  }
+</style>
+<div class="grid grid--1x3">
+  <div style="height:100px; background-color:red;"></div>
+  <div style="height:100px; background-color:gold;"></div>
+  <div style="height:100px; background-color:green;"></div>
+</div>
