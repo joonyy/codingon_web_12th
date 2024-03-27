@@ -1,24 +1,16 @@
 <html lang="en">
-<head>
-  <%-import('./partials/header.ejs') %>
+  <head>
+  <%-include("./partials/header.ejs")%>
 </head>
 <body>
-  <h1>BLOG</h1>
-  <h2>HOME</h2>
   <nav>
-
+    <%-include("./partials/nav.ejs")%>
   </nav>
-
-  <div class="content">
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est deleniti harum mollitia voluptas temporibus sapiente aut illo eius doloribus, laboriosam soluta nostrum incidunt error? Quisquam nisi quos voluptatem cupiditate velit!
-  </div>
-  <% for(var i=0; i<5; i++){ %>
-    <h1> 안녕 </h1>
-  <%}%>
-
-
+<div>
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium veritatis optio similique reiciendis porro repudiandae necessitatibus magni eius officiis illum. Porro voluptatem labore exercitationem culpa sed beatae numquam, repellat similique.
+</div>
 <footer>
-  Copyrights 
+  <%-include("./partials/footer.ejs")%>
 </footer>
 </body>
 </html>
