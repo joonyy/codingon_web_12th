@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0;}
+    fieldset{width:80%; margin:auto;}
+    input {border-bottom: 1px dashed #ccc; border-top:none;
+    border-left: none; border-right: none;
+    }
+    input:focus{background-color: green; border:none;}
+    #send:hover { color: red; background-color: #111; padding:1rem 3rem};
+  </style>
+</head>
+<body>
+  <form action="/action_login.php" method="get">
+    <fieldset>
+      <legend>여러가지 입력양식 태그</legend>
+      Select your color: <input type="color" name="favcolor" value="#ff0000"><br>
+      Birth: <input type="date" name="bday"><br>
+      Birth(date & time): <input type="datetime-local" name="bdayTime"><br>
+      <mark>A date와 time이 나타납니다.(timezone을 보여주진 않는다.)</mark><br>
+      Brithday(month & year) : <input type="month" name="bdayMonth"><br>
+      Select Week : <input type="week" name="yearweek"><br>
+    
+      e-mail: <input type="email" name="emailaddress" placeholder="이메일을 한개만 적으세요!" required><br>
+      e-mail: <input type="email" name="multiemail" placeholder="이메일을 콤마로 구분하세요" multiple><br>
+
+      (Between1~10): <input type="number" name="quantity" min="1" max="10" step="2"><br>
+      Points : <input type="range" name="points" min="0" max="10"><br>
+
+      Search Google : <input type="search" name="gSearchh"><br>
+      Tel : <input type="tel" name="telephone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{4}"><br>
+      <span>입력형태 예시: 123-45-6789</span><br>
+
+      예약시간 선택 : <input type="time" name="user-time"><br>
+      포폴링크 : <input type="url" name="homepage"><br>
+      <input type="submit" value="회원가입" id="send">
+    </fieldset>
+  </form>
+</body>
+</html>
