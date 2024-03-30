@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%=title%></title>
+</head>
+<body>
+  <h1>Result : <%=title%></h1>
+  <div>사용자 아이디는 <%=userInfo.id%> 입니다.</div>
+  <div>사용자 비밀번호는 <%=userInfo.pw%> 입니다. </div>
+  <div>당신의 grade는 <%=userInfo.grade%> 입니다.</div>
+  <script>
+    console.log(document.title, this.userInfo);
+  </script>
+</body>
+</html>

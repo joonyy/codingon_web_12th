@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%=title%></title>
+</head>
+<body>
+  <h2>GET 요청</h2>
+  <form action="/login" method="get">
+    <label for="id">ID</label>
+  <input type="id" name="id" id="id" placeholder="3글자 이상 입력하세요" minlength="3">
+  <label for="pw">PW</label><input type="password" name="pw" placeholder="PW" id="pw">
+    <input type="number" name="grade" placeholder="GRADE" max="4">
+    
+    <button> 제출하기 </button>
+  </form>
+
+  <h2>Post 요청</h2>
+  <form action="/login" method="post">
+    <label for="id">ID</label>
+  <input type="id" name="id" id="id" placeholder="3글자 이상 입력하세요" minlength="3">
+  <label for="pw">PW</label><input type="password" name="pw" placeholder="PW" id="pw">
+    <input type="number" name="grade" placeholder="GRADE" max="4">
+    
+    <button> 제출하기 </button>
+  </form>
+
+  <h2>유효성 검사</h2>
+  <form action="/result" method="post" name="valiForm" onsubmit="return checkForm(this)">
+    <label for="id">ID</label>
+  <input type="text" name="id" id="id" placeholder="3글자 이상 입력하세요" minlength="3">
+  <h3>우편물 수령장소 선택 : </h3>
+  <input type="radio" name="post" value="자택">자택
+  <input type="radio" name="post" value="회사">회사
+    <input type="submit" value="제출하기">
+</form>
+<script>
+  function checkForm(form){
+    if(form.id.value==''){
+      alert('id를 입력하세요!');
+      form.id.focus();
+      return false;
+    }
+
+    if((form.post[0].checked == false)&&(form.post[1].checked == false)){
+      alert('우편물 수령장소를 선택해주세요');
+      return false; //submit이 일어나지 않도록 false를 되돌린다.
+    }
+  }
+</script>
+</body>
+</html>

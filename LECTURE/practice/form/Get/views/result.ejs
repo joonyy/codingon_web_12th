@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%=title%></title>
+</head>
+<body>
+  <p><%=userInfo.name%>님 안녕하세요!</p>
+  <p><%=userInfo.gender%>이시군요!</p>
+  <span><%=userInfo.birthYear%>년 <%=userInfo.birthMonth%>월 <%=userInfo.birthDate%>일에 태어나셨네요!</p>
+  <div>
+    <%for(i in userInfo.interests){%>
+      <span><%=userInfo.interests[i]%></span>
+    <%}%>
+    을 좋아하시는군요!
+  </div>
+</body>
+</html>
