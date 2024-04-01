@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="" name="register">
+    <label for="username">이름</label>
+    <input type="text" name="username" id="username" required />
+    <br />
+    <fieldset>
+      <legend>성별</legend>
+      <input type="radio" name="gender" id="male" value="male" checked />
+      <label for="male">남자</label>
+      <input type="radio" name="gender" id="female" value="female" />
+      <label for="female">여자</label>
+    </fieldset>
+    <fieldset>
+      <legend>생년월일</legend>
+        <select name="birthYear" id="year">
+          <% for(let i = 0; i < 50; i++) { %>
+          <option value="<%= 2010 - i %>"><%= 2010 - i  %></option>
+          <% } %>
+        </select>
+        년
+        <select name="birthMonth" id="month">
+          <% for(let i = 0; i < 12; i++) { %>
+          <option value="<%= i + 1 %>"><%= i + 1  %></option>
+          <% } %>
+        </select>
+        월
+        <select name="birthDate" id="date">
+          <% for(let i = 0; i < 31; i++) { %>
+          <option value="<%= i+1 %>"><%= i+1  %></option>
+          <% } %>
+        </select>
+        일
+      </fieldset>
+        <fieldset>
+          <legend>관심사</legend>
+          <input type="checkbox" name="hobby" value="여행"> 여행
+          <input type="checkbox" name="hobby" value="패션"> 패션
+          <input type="checkbox" name="hobby" value="음식"> 음식
+        </fieldset>
+      <input type="submit" value="회원가입" onsubmit=""> 
+    </form>
+    <br />
+  </form>
+
+  <script>
+    const registerResult = document.querySelector('.register-result');
+    function clickRegister(){
+      const form= document.forms['register'];
+      const hobbies = Array.form(form.hobby).filter(elem => elem.checked === true).map(elem => elem.value)
+      console.log('hobbies', hobbies);
+    }
+    const data = {
+      username: form.username.value,
+      gender : form.gender.value,
+      birthYear : form.birthYear.value,
+      birthMonth: form.birthMonth.value,
+      birthDay : form.birthDay.value,
+      hobby : hobbies 
+    }
+  </script>
+</body>
+</html>

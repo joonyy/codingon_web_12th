@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+      .result{ padding:20px; margin-top:20px;
+        border-top: 3px solid #ccc;}
+    </style>
+</head>
+<body>
+  <h1>동적 폼 전송하기</h1>
+  <form action="" name="register">
+    <label for="name">이름</label>
+    <input type="text" name="name" id="name" required>
+    <br>
+    <label for="male">남</label>
+    <input type="radio" name="gender" value="male" required>
+
+    <label for="female">여</label>
+    <input type="radio" name="gender" value="female">
+    <br><br>
+    <button type="button" onclick="axiosGet()">Axios Get 제출하기</button>
+    <button type="button" onclick="axiosPost()">Axios Post 제출하기</button>
+    <br><br>
+    <button type="button" onclick="fetchGet()">fetch Get 제출</button>
+    <button type="button" onclick="fetchPost()">fetch Post 제출</button>
+
+    <hr>
+    <ul>
+      <li><a href="/practice" method="get">AXIOS Get 실습</a></li>
+      <li><a href="/practice" method="post">AXIOS Post 실습</a></li>
+    </ul>
+    <!-- 전송된 결과를 보여주는 곳 -->
+    <div class="result"></div>
+    
+  </form>
+  <script>
+    const resultBox= document.querySelector('.result');
+
+    async function axiosGet(){
+      console.log("*******")
+          const form = document.forms['register'];
+          const data = {
+              name: form.name.value,
+              gender: form.gender.value
+          }
+          try{
+              if(! form.name.checkValidity()) {
+                  resultBox.textContent = '이름을 입력해주세요.';
+              } else if(!form.gender[0].checkValidity()){
+                  resultBox.textContent = '성별을 선택해주세요.';
+              } else {
+                const response =  await axios({
+                    method: 'get',
+                    url: '/axios',
+                    params: data
+                  })
+                  console.log("response--> ", response);
+                  const { name, gender }= response.data;
+                  resultBox.textContent = `Get /axios 요청 완료! ${name}님의 성별은 ${gender}!`;
+              }
+          } catch (err) {
+              console.log('Error!', err)
+              resultBox.textContent = '알수없는 에러 발생!';
+          }
+      }
+
+    function axiosPost(){
+      const form = document.forms['register'];
+      const data={
+        name:form.name.value,
+        gender:form.gender.value
+      }
+      axios({
+        method:'post',
+        url:'/axios',
+        data:data
+      }).then((response)=>{
+        console.log(response.data);
+        resultBox.textContent=`Post / Axios 요청 성공. ${data.name}님의 성별은 ${data.gender}입니다.`
+      })
+      .catch((err)=>{
+      console.log("ERROR"),
+      resultBox.textContent=`Get/axios 요청실패 ${err.response.data}`
+    });
+    }
+
+    function fetchGet(){
+      const form = document.forms['register'];
+      const data={
+        name:form.name.value,
+        gender:form.gender.value
+      }
+      fetch(`/fetch?name=${data.name}&gender=${data.gender}`, {method:"GET"})
+      .then((response)=>{
+        return response.json()
+      }).then(data =>{
+        console.log('DATA : ',data);
+        resultBox.textContent=`Get / fetch요청 완료, ${data.name}님의 성별은 ${data.gender}입니다.`
+      })
+    }
+
+    function fetchPost(){
+      const form = document.forms['register'];
+      const data={
+        name:form.name.value,
+        gender:form.gender.value
+      }
+      fetch("/fetch", {
+        method:"post",
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify(data)
+      }).then(response=>{
+        return response.json()
+      }).then(data=>{
+        console.log('DATA', data)
+        resultBox.textContent=`Post / fetch요청 완료, ${data.name}님의 성별은 ${data.gender}입니다.`
+      }).catch(err=>{
+        console.log('ERROR!!! ',err.message)
+      })
+    }
+  </script>
+</body>
+</html>
