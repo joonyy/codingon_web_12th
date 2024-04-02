@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <!-- axios cdn -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <h1>Axios Get 회원가입</h1>
+  <form name="register">
+    <label for="">이름</label>
+    <input type="text" name="username" required>
+    
+    <fieldset>
+      <legend>성별</legend>
+      <input type="radio" name="gender" id="female" checked><label for="female" >여자</label>
+      <input type="radio" name="gender" id="male"><label for="male">남자</label>
+    </fieldset>
+
+  <fieldset>
+      <legend>생년월일</legend>
+      <select name="birthYear" id="">
+         <% for(let i=0; i<20; i++){ %>
+            <option value="<%= 2010 - i %>"><%= 2010 - i %></option>
+         <%  } %>
+      </select>
+      <label for="">년</label>
+
+      <select name="birthMonth" id="">
+        <% for(let i=1; i<13; i++){ %>
+           <option value="<%=i %>"><%=i %></option>
+        <%  } %>
+     </select>
+     <label for="">월</label>
+
+
+     <select name="birthDay" id="">
+      <% for(let i=1; i<32; i++){ %>
+         <option value="<%=i %>"><%=i %></option>
+      <%  } %>
+   </select>
+   <label for="">일</label>
+ </fieldset>
+
+    <fieldset>
+      <legend>관심사</legend>
+      <input type="checkbox" name="hobby" value="travel" checked > <label>여행</label>
+      <input type="checkbox" name="hobby" value="fashion" > <label>패션</label>
+      <input type="checkbox" name="hobby" value="food" > <label>음식</label>
+    </fieldset>
+    <button type="button" onclick="clickRegister()">회원가입</button>
+  </form>
+
+  <div class="register-result"></div>
+
+  <script>
+    const registerResult = document.querySelector('.register-result');
+    function clickRegister(){
+      const form = document.forms['register'];
+      const hobbies = Array.from(form.hobby).filter( elem => elem.checked===true ).map(elem=> elem.value)
+      const data ={
+        username: form.username.value,
+        gender: form.gender.value,
+        birthYear: form.birthYear.value,
+        birthMonth : form.birthMonth.value,
+        birthDay:form.birthDay.value,
+        hobby : hobbies,
+      }
+      axios({
+        method:'get',
+        url:'/test1-axios',
+        params: data
+      }).then(res =>{
+        console.log("res.data -->" , res.data)
+        const { 
+          username, 
+          gender,
+          birthYear,
+          birthMonth,
+          birthDay,
+          hobby
+        } = res.data;
+        registerResult.textContent=`${username}님의 환영합니다 생년월일은 ${birthYear} 년
+          ${birthMonth} 월 ${birthDay} 일 취미는 ${hobby} 입니다 `;
+      })
+
+    }
+  </script>
+</body>
+</html>
