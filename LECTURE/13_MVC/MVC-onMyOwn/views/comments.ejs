@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>COMMENTS</h1>
+  <ul>
+    <%for(let i = 0; i< commentInfos.length; i++){%>
+      <li>
+        <b><%=commentInfos[i].userId %></b>
+        <a href="/comment/<%=commentInfos[i].id %>">
+          <%= commentInfos[i].username %>
+        </a>
+      </li>
+    <%}%>
+  </ul>
+</body>
+</html>

@@ -13,5 +13,5 @@ exports.comment = (req,res) =>{
   console.log("req.params.id : ", req.params.id)
   const commentId = req.params.id;// 유저의 id 번호
   const comments = Comment.commentInfo(); //전체 데이터
-  res.render('comment',{commentInfo:comments[commentId]}) //
+  res.render('comment',{commentInfo:comments[commentId]}) 
 }
