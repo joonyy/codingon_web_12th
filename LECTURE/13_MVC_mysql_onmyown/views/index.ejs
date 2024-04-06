@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>회원 목록</h1>
+  <h2>전체 회원 수 : <%= mydata.length %></h2>
+
+  <%for(let i = 0 ;i<mydata.length; i++){%>
+  <div>번호 : <%= mydata[i].custid %></div>
+  <div>이름 : <%= mydata[i].custname%></div>
+  <div>주소 : <%= mydata[i].addr%></div>
+  <div>연락처 : <%= mydata[i].phone %></div>
+  <div>생년월일 : <%= mydata[i].birth%></div>
+  <br><hr>
+  <%}%>
+</body>
+</html>

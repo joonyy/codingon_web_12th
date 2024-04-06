@@ -1,13 +1,17 @@
-
 {
-  "description": "",
   "scripts": {
-    "start":"nodemon app.js"
+    "start": "nodemon app.js"
   },
-
   "dependencies": {
     "ejs": "^3.1.9",
     "express": "^4.19.2",
     "nodemon": "^3.1.0"
-  }
+  },
+  "name": "axios",
+  "version": "1.0.0",
+  "main": "app.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
