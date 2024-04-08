@@ -20,7 +20,7 @@ exports.postVisitor = (data,cb) =>{
   const sql = `INSERT INTO visitor (name, comment) VALUES (?, ?)`;
   const values = [data.name,data.comment];
   conn.query(sql,values,(err,rows) =>{
-    if(er) throw err;
+    if(err) throw err;
     console.log("1----> ");
     cb(rows.insertId);
   })
