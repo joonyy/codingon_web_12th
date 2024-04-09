@@ -1,0 +1,16 @@
+{
+  "development": {
+    "username": "user",
+    "password": "12345678",
+    "database": "kdt",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}

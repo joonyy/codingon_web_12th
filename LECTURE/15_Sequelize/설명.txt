@@ -1,0 +1,10 @@
+1. ./node_modules/.bin/sequelize init
+=> config, migrations, models, seeders 폴더 생성
+
+2. 날짜숫자-create-user.js 파일안에
+
+~up : 생성(./node_modules/.bin/sequelize db:migrate)
+~down : 취소(./node_modules/.bin/sequelize db:migrate:undo)
+
+3. 데이터 입력 담당(seeder)
+seeder 폴더에 생성된 파일에 테이블의 필드, 데이터 형식에 맞춰 데이터를 입력한다.
