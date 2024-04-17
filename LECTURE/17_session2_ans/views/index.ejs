@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%-include('include', {title:'Login'}) %>
+<body>
+  <%-include('header') %>
+  <% if(isLogin) { %>
+    <h1><%= user %>님 환영합니다.</h1>
+    <p>여기는 Home 입니다!</p>
+    <% }else{ %>
+      <p>아직 로그인하지 않으셨군요</p>
+      <a href="/login">LOGIN</a>
+  <% } %>
+</body>
+</html>
