@@ -7,7 +7,7 @@ const p = new Promise((resolve,reject) =>{
 })
 // p.then(((result)=>{ console.log(`결과는 : ${result}`)}));
 p.then((result=>console.log(`결과는 : ${result}`)));
-*/
+
 
 //2.
 /*
