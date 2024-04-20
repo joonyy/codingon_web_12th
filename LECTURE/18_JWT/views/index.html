@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style media="screen">
+    input, button { padding: 7px; height: 40px;}  fieldset { margin-bottom: 20px;}
+    </style>  </head> <body>
+    <h2 id="title">Local Storage - JavaScript</h2>
+    <fieldset>
+    <legend> Insert Data</legend>
+    <input id="inputKey" type="text" placeholder="Enter Key...">
+    <input id="inputValue" type="text" placeholder="Enter Value..">
+    <button type="button" id="btnInsert">Insert Data</button>
+    </fieldset>
+    <fieldset>
+    <legend>Local Storage</legend>
+    <div id="IsOutput">
+    </div>
+    </fieldset>
+    <script>
+    const inputKey = document.getElementById('inputKey');
+    const inputValue = document.getElementById('inputValue');
+    const btnInsert = document.getElementById('btnInsert');
+    const IsOutput = document.getElementById('IsOutput');
+    btnInsert.onclick = ()=>{
+      const key = inputKey.value;
+      const value = inputValue.value;
+      // console.log(key, value)
+      if( key && key){
+      localStorage.setItem(key, value);//
+      location.reload();//새로고침
+      // console 창에서 localStorage 엔터로 확인
+      // localStorage.clear();
+      }
+    }
+    for(let i=0; i<localStorage.length; i++){
+    const key = localStorage.key(i);
+    const value = localStorage.getItem(key);
+    IsOutput.innerHTML += ` ${key} : ${value} <br/>`
+    }
+    </script>    
+</body>
+</html>
