@@ -1,0 +1,8 @@
+use kdt;
+CREATE TABLE user(
+  id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  pw VARCHAR(255) NOT NULL,
+  name VARCHAR(15) NOT NULL,
+  userid VARCHAR(15) NOT NULL
+);
+desc user;
