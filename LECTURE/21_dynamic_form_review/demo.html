@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //arr.map(현재값, 인덱스, 배열);
+    //.map() 메소드 : 각 배열의 요소에 대해 함수를 수행, 새로운 배열을 만든다.
+    //.map() 메소드 : 원본 배열은 변경되지 않음.
+    const numbers = [65,44,12,4];
+  const newArr = numbers.map(myF);
+  console.log(newArr);
+  
+  function myF(num){
+    return num*10;
+  }
+
+  //result => 조건에 해당하는 것만 취한다.
+  //형식 : filter(currentValue, 인덱스, 자기자신)
+  const result =[1,2,3,4,5].filter(function(item, index, self){
+    console.log(`[${index}]=${item}`);
+    return item % 2;
+  })
+  console.log(result)
+
+  //reduce 
+  const sum = [1,2,3,4,5].reduce(function(pre,cur){
+    return pre+cur;
+  })
+  console.log(sum)
+
+  //유사배열, 문자열
+  const result1 = Array.from('hello');
+  console.log(result1);
+  </script>
+</body>
+</html>
