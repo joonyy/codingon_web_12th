@@ -69,7 +69,7 @@ function editDo(id){
   const form = document.forms['visitor-form'];
    axios({
     method:'patch',
-    url:'/visitoreditDo',
+    url:'/visitoreditDo/:id',
     data:{
         id:id,
         name : form.name.value,
