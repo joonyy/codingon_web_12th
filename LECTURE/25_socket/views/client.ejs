@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>채팅</h1>
+  <!-- 채팅 내용이 쌓이는 곳 -->
+  <ul></ul>
+
+  <form id="chat">
+    이름 <input type="text" id="name"> <br/>
+    내용 <input type="text" id="message"> <br/>
+    <button>전송</button>
+  </form>
+  <script>
+    //클라이언트 소켓 객체를 선언
+    const socket = new WebSocket('ws://localhost:8000');
+    console.log('socket ==> ',socket);
+    
+    const chatForm =  document.getElementById('chat');
+    const ul = document.querySelector('ul');
+    
+    socket.addEventListener('open',(event)=>{
+      console.log('[서버 연결 완료]');
+    })
+
+    socket.addEventListener('close',(event)=>{
+      console.log('[서버 연결 종료]');
+    })
+
+    socket.addEventListener('error',(event)=>{
+      console.log('[에러 발생] : ',event.console.error);
+    })
+
+    socket.addEventListener('message',(event)=>{
+
+    })
+    
+    //message이벤트
+    socket.addEventListener('message',(event)=>{
+      const data = JSON.parse(event.data);
+      const {msg, name} = data;
+      const li = document.createElement('li');
+      li.textContent = `${name}님 : ${msg}`;
+      ul.appendChild(li);
+    })
+
+    //form이벤트
+    chatForm.addEventListener('submit',(event)=>{
+      event.preventDefault();// 기본 기능 정지, 새로 추가할 내용 실행
+      const msg = chatForm.message.value;
+      const name = chatForm.name.value;
+      const data = {
+      msg:msg,
+      name:name,
+      }
+
+      console.log('보내려는 메시지 데이터 : ',event.data);
+      socket.send(JSON.stringify(data));
+      chatForm.reset();
+    })
+
+  </script>
+</body>
+</html>

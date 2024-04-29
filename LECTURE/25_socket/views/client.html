@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>채팅</h1>
+  <!-- 채팅 내용이 쌓이는 곳 -->
+  <ul id="myList">
+    <li>coffee</li>
+    <li>milk</li>
+  </ul>
+  <button onclick="myF()">추가하기</button>
+  <script>
+    function myF(){
+      const node = document.createElement('li');
+      const textNode = document.createTextNode('tea');
+      //DOM을 형성할 때 Node로 구성되어 있다.
+      node.appendChild(textNode);
+      document.getElementById('myList').appendChild(node);
+    }
+  </script>
+</body>
+</html>
