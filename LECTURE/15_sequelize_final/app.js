@@ -14,7 +14,7 @@ sequelize
   .sync({force:false})
   .then(()=>{
     app.listen(8000, ()=>{
-      console.log('8080번 포트에서 서버 실행중');
+      console.log('8000번 포트에서 서버 실행중');
     })
   })
   .catch((err)=>{

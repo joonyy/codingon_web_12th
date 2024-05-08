@@ -4,7 +4,7 @@
 | player_id (PK) |<----<| profile_id (PK)|
 | name           |      | player_id (FK) |
 | age            |      | position       |
-| team_id (FK)   |      | salary         |
+| team_id (FK)    |      | salary         |
 +----------------+      +----------------+
 
     1 |

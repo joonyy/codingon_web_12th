@@ -12,7 +12,7 @@ exports.allVisitorList =(req,res)=>{
         res.render('visitors', {data:result})
     })
 }
-// 방명록 에 추가
+// 방명록에 추가
 exports.addVisitor = (req,res)=>{
     console.log('폼에서 데이터추가 버튼 후 넘겨준 데이터',req.body);
     const {name, comment } = req.body;
