@@ -16,6 +16,6 @@ app.get('*',(req,res)=>{
   res.render('404');
 })
 
-app.listen(8000, function(){
-  console.log('8000번 포트에서 서버 실행중 . . .')
+app.listen(8080, function(){
+  console.log('8080번 포트에서 서버 실행중 . . .')
 })
