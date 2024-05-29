@@ -1,4 +1,4 @@
-# codingon_web_12th
+# Study
 포스코X코딩온 KDT Web 12기 수업코드 저장소
 
 - 작성자 : joony 

@@ -1,0 +1,9 @@
+.App{
+  text-align: center;
+}
+
+.title{
+  background-color: dodgerblue;
+  color: white;
+  font-size: 48px;
+}
