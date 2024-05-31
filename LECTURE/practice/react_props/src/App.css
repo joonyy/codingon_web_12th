@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+}
+
+.box{
+  justify-content: center;
+  background-color: pink;
+  width:60%;
+}
+.img{
+  width : 200px;
+  height : 200px;
+}
