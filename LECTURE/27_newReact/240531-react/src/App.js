@@ -1,24 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import FunctionComponent from './FunctionComponent.js';
+import ClassComponent from './ClassComponent.js';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <FunctionComponent name="함수 코딩온">저는 첫 번째 component의 props.children입니다.</FunctionComponent>
+    <FunctionComponent name={1234}> 저는 1234의 props.children입니다.</FunctionComponent>
+    <hr />
+    <ClassComponent>나는 classComponent의 props.children입니다.</ClassComponent>
     </div>
+
   );
 }
 
