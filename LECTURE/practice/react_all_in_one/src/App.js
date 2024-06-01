@@ -1,10 +1,10 @@
 import './App.css';
-import TextEx from './components/TextEx';
+import ExAll from './components/ExAll';
 
 function App() {
   return (
     <div className="App">
-      <TextEx />
+      <ExAll/>
     </div>
   );
 }
