@@ -1,24 +1,20 @@
 import {useState} from 'react';
 
 export default function ColorEx(){
-const [style, setStyle] = useState({});
-const [text, setText] = useState('검정');
+const [textInfo, changeTextInfo] = useState({
+  color:'black',
+  text:'검정색'
+})
 
-const toRed = () =>{
-  setText('빨간')
-  setStyle({color:"red"});
-}
-
-const toBlue = () =>{
-  setText('파란');
-  setStyle({color:"blue"});
+const handleText = (color, e) =>{
+  changeTextInfo({color:color, text:e.target.innerText});
 }
 
   return(
     <div>
-      <h1 style={style}> {text}색 글씨 </h1>
-      <button onClick={()=>{toBlue()}}>파란색</button>
-      <button onClick={()=>{toRed()}}>빨간색</button>
+      <h1 style={{color:textInfo.color, fontSize:40}}> {textInfo.text} 글씨 </h1>
+      <button onClick={(e) => handleText('blue', e)}>파란색</button>
+      <button onClick={(e) => handleText('red',e)}>빨간색</button>
     </div>
   )
 }
