@@ -48,7 +48,7 @@ export default function Guest(){
   // 검색
   const handleSearch = () => {
     const filteredData = Data.filter((item) =>
-      item[searchField].includes(searchTerm)
+      item[searchField].toLowerCase().includes(searchTerm.toLowerCase())
     );
     setDisplayData(filteredData);
   };
