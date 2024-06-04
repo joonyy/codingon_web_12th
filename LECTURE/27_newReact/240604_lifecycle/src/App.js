@@ -1,9 +1,9 @@
 import './App.css';
-import LifeCycleClass from './LifeCycleClass.js';
+import PostList from './PostList.js';
 function App() {
   return (
     <div className="App">
-      <LifeCycleClass/>
+      <PostList />
     </div>
   );
 }
