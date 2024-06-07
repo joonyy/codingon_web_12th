@@ -5,12 +5,14 @@ import UseCallbackEx2 from './Components/UseCallbackEx2';
 import {useState} from 'react';
 import UseMemoPr from './Components/UseMemoPr';
 import UseCallbackPr from './Components/UseCallbackPr';
+import UseReducerEx from './Components/UseReducerEx';
+import Faq from './Components/Faq';
 
 function App() {
-  const [postId, setpostId] = useState(3);
+  // const [postId, setpostId] = useState(3);
   return (
     <div className="App">
-      <UseMemoEx/>
+      {/* <UseMemoEx/>
       <br />
       <hr />
       <UseCallbackEx/>
@@ -27,7 +29,11 @@ function App() {
       <UseMemoPr/>
       <br />
       <hr />
-      <UseCallbackPr />
+      <UseCallbackPr /> */}
+      <UseReducerEx />
+      <br />
+      <hr />
+      <Faq/>
     </div>
   );
 }
