@@ -44,7 +44,7 @@ export default function PostList() {
             //   </div>
             //   <p>{post.body.slice(0, 120)}...</p>
             // </div>
-            <PostItem key={post.id} post={post} />
+            <PostItem className="PostItem" key={post.id} post={post} />
           );
         })
       ) : (

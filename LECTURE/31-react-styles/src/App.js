@@ -2,6 +2,7 @@ import LarvaComponentPR from './LarvaComponentPR';
 import MixinComponentPR from './MixinComponentPR';
 import PostList from './PostList.js';
 import SassComponent from './SassComponent';
+import StyledComponent from './StyledComponent.js';
 import './styles/PostList.scss';
 
 
@@ -20,8 +21,10 @@ function App() {
       <br />
       <hr /> 
       <LarvaComponentPR />
-      <MixinComponentPR />*/}
-      <PostList />
+      <MixinComponentPR />
+       <PostList /> */}
+      <h2>Styled Component</h2>
+      <StyledComponent/>
     </div>
   );
 }
