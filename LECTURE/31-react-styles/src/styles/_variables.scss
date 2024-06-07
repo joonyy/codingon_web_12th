@@ -1,0 +1,10 @@
+//scss 파일명 앞에 _가 있다면
+  //이 파일은 css 파일로 변환할 필요가 없음을 알려주는 것!
+
+//변수 선언 : $ 키워드 사용
+$color-first: red;
+$color-second: orange;
+$color-third: yellow;
+
+$animation-duration : 0.4s;
+$box-animation: 0.2s;

@@ -1,0 +1,26 @@
+@import './variables'; @import './utils';
+
+//- 중첩 : 부모 자식 관계를 표현하는 것이 가능.
+.container{
+  .box{
+    //정의된 믹스인  호출하기
+    @include box(150px);
+
+    //.box.red => box, red
+    // & : 부모선택자 참조해서 치환. 묘하게 this랑 비슷한것 같기도..?
+    &.red{
+      background-color: $color-first;
+    }
+    &.orange{
+      background-color: $color-second;
+    }
+    &.yellow{
+      background-color: $color-third;
+    }
+    &:hover{
+      animation-duration: $animation-duration * 2;
+      transform: translateY(-20px);
+      transition: transform $box-animation;
+    }
+  }
+}
