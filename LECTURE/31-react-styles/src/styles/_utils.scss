@@ -3,3 +3,25 @@
   width: $size;
   height : $size;
 }
+
+@mixin animation($name, $length) {
+  @keyframes #{$name} {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX($length);
+    }
+    50% {
+      transform: translateX($length) translateY($length);
+    }
+    75% {
+      transform: translateX(0) translateY($length);
+    }
+    100% {
+      transform: translateX(0) translateY(0);
+    }
+  }
+
+  animation: #{$name} 2s infinite;
+}
