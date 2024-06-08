@@ -8,6 +8,7 @@ import UseCallbackPr from './Components/UseCallbackPr';
 import UseReducerEx from './Components/UseReducerEx';
 import Faq from './Components/Faq';
 import Form from './Components/react-hook-form/Form';
+import FormPR from './Components/react-hook-form/FormPR';
 
 function App() {
   // const [postId, setpostId] = useState(3);
@@ -35,7 +36,7 @@ function App() {
       <br />
       <hr />
       <Faq/> */}
-      <Form />
+      <FormPR />
     </div>
   );
 }
