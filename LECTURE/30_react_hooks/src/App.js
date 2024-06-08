@@ -7,6 +7,7 @@ import UseMemoPr from './Components/UseMemoPr';
 import UseCallbackPr from './Components/UseCallbackPr';
 import UseReducerEx from './Components/UseReducerEx';
 import Faq from './Components/Faq';
+import Form from './Components/react-hook-form/Form';
 
 function App() {
   // const [postId, setpostId] = useState(3);
@@ -29,11 +30,12 @@ function App() {
       <UseMemoPr/>
       <br />
       <hr />
-      <UseCallbackPr /> */}
+      <UseCallbackPr />
       <UseReducerEx />
       <br />
       <hr />
-      <Faq/>
+      <Faq/> */}
+      <Form />
     </div>
   );
 }
