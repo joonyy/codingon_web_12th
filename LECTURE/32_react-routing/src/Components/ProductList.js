@@ -64,11 +64,11 @@ export const productInfos = [
   },
 ];
 
-export default function ProductList(){
+export default function ProductList({products}){
 
   return(
     <div>
-      {productInfos.map((product)=>{
+      {products.map((product)=>{
         return <ProductItem key={product.id} product={product} />
       })}
     </div>
