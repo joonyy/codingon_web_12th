@@ -3,12 +3,15 @@
 import { combineReducers } from "redux";
 import counterReducer from "./counterReducer";
 import isVisibleReducer from "./isVisibleReducer";
+import MybankReducer from "./MybankReducer"; //내가 한 거
+import bankReducer from "./bankReducer";
 
 //combineReducer
 const rootReducer = combineReducers({
   //key: value
   counter : counterReducer,
-  isVisible : isVisibleReducer
+  isVisible : isVisibleReducer,
+  bank : bankReducer
 });
 
 export default rootReducer;
